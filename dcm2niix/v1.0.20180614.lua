@@ -10,5 +10,5 @@ whatis("Description : dcm2nii DICOM to NIfTI converter")
 whatis("URL         : https://github.com/rordenlab/dcm2niix")
 
 local dir = os.getenv("VL_QUARANTINE_DIR")
-local pkg = pathJoin(dir, myModuleName(), myModuleVersion(), "bin")
+local pkg = pathJoin(dir, "Core", myModuleName(), myModuleVersion(), "bin")
 prepend_path("PATH", pkg)

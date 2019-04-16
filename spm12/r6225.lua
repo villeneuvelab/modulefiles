@@ -10,6 +10,6 @@ whatis("Version     : r6225")
 whatis("Category    : Matlab Toolbox")
 whatis("URL         : https://www.fil.ion.ucl.ac.uk/spm/")
 
-local dir = pathJoin(os.getenv("VL_QUARANTINE_DIR"), "matlab_toolboxes")
+local dir = pathJoin(os.getenv("VL_QUARANTINE_DIR"), "Core", "matlab_toolboxes")
 local pkg = pathJoin(dir, myModuleName(), myModuleVersion())
 prepend_path("MATLABPATH", pkg)

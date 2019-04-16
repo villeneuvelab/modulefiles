@@ -9,6 +9,8 @@ whatis("Category    : Application")
 whatis("Description : Inspecting and modifying DICOM metadata")
 whatis("URL         : http://nrg.wustl.edu/software/dicom-browser/")
 
+load("java")
+
 local dir = os.getenv("VL_QUARANTINE_DIR")
-local pkg = pathJoin(dir, myModuleName(), myModuleVersion(), "bin")
+local pkg = pathJoin(dir, "Core", myModuleName(), myModuleVersion(), "bin")
 prepend_path("PATH", pkg)

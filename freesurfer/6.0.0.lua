@@ -1,36 +1,44 @@
--- -*- lua -*-
-help([[
-FreeSurfer Software Suite
-An open source software suite for processing and analyzing (human) brain MRI images.
-]])
+help([==[
 
-whatis("Name        : freesurfer")
-whatis("Version     : 6.0.0")
-whatis("Category    : Application")
-whatis("Description : Neuroimaging software analysis")
-whatis("URL         : https://surfer.nmr.mgh.harvard.edu/")
+Description
+===========
+FreeSurfer is a software package for the analysis and visualization of structural and functional 
+ neuroimaging data from cross-sectional or longitudinal studies. It is developed by the Laboratory for Computational 
+ Neuroimaging at the Athinoula A. Martinos Center for Biomedical Imaging.
 
-dir=os.getenv("VL_QUARANTINE_DIR")
-local pkg = pathJoin(dir, myModuleName(), myModuleVersion())
 
-setenv("FREESURFER_HOME", pkg)
+More information
+================
+ - Homepage: http://freesurfer.net/
+]==])
 
-setenv("FIX_VERTEX_AREA", "")
-setenv("FMRI_ANALYSIS_DIR", pathJoin(pkg, "fsfast"))
-setenv("FSFAST_HOME", pathJoin(pkg, "fsfast"))
+whatis([==[Description: FreeSurfer is a software package for the analysis and visualization of structural and functional 
+ neuroimaging data from cross-sectional or longitudinal studies. It is developed by the Laboratory for Computational 
+ Neuroimaging at the Athinoula A. Martinos Center for Biomedical Imaging.]==])
+whatis([==[Homepage: http://freesurfer.net/]==])
+
+local root = "/project/ctb-villens/quarantine/Core/freesurfer/6.0.0"
+
+conflict("freesurfer")
+
+prepend_path("LIBRARY_PATH", pathJoin(root, "lib"))
+prepend_path("PATH", pathJoin(root, "bin"))
+setenv("EBROOTFREESURFER", root)
+setenv("EBVERSIONFREESURFER", "6.0.0")
+setenv("EBDEVELFREESURFER", pathJoin(root, "easybuild/Core-freesurfer-6.0.0-easybuild-devel"))
+
+setenv("FMRI_ANALYSIS_DIR", "/project/ctb-villens/quarantine/Core/freesurfer/6.0.0/fsfast")
+setenv("FREESURFER_HOME", "/project/ctb-villens/quarantine/Core/freesurfer/6.0.0")
+setenv("FSFAST_HOME", "/project/ctb-villens/quarantine/Core/freesurfer/6.0.0/fsfast")
 setenv("FSF_OUTPUT_FORMAT", "nii.gz")
 setenv("FS_OVERRIDE", "0")
-setenv("FUNCTIONALS_DIR", pathJoin(pkg, "sessions"))
-setenv("LOCAL_DIR", pathJoin(pkg, "local"))
-setenv("MINC_BIN_DIR", pathJoin(pkg, "mni", "bin"))
-setenv("MINC_LIB_DIR", pathJoin(pkg, "mni", "lib"))
-setenv("MNI_DATAPATH", pathJoin(pkg, "mni", "data"))
-setenv("MNI_DIR", pathJoin(pkg, "mni"))
-setenv("MNI_PERL5LIB", pathJoin(pkg, "mni", "share", "perl5"))
-setenv("OS","Linux")
-prepend_path("PATH", pathJoin(pkg, "mni", "bin"))
-prepend_path("PATH", pathJoin(pkg, "tktools"))
-prepend_path("PATH", pathJoin(pkg, "fsfast", "bin"))
-prepend_path("PATH", pathJoin(pkg, "bin"))
-prepend_path("PERL5LIB", pathJoin(pkg, "mni", "share", "perl5"))
-setenv("SUBJECTS_DIR", pathJoin(pkg, "subjects"))
+setenv("FUNCTIONALS_DIR", "/project/ctb-villens/quarantine/Core/freesurfer/6.0.0/sessions")
+setenv("MINC_BIN_DIR", "/project/ctb-villens/quarantine/Core/freesurfer/6.0.0/mni/bin")
+setenv("MINC_LIB_DIR", "/project/ctb-villens/quarantine/Core/freesurfer/6.0.0/mni/lib")
+setenv("MNI_DATAPATH", "/project/ctb-villens/quarantine/Core/freesurfer/6.0.0/mni/data")
+setenv("MNI_DIR", "/project/ctb-villens/quarantine/Core/freesurfer/6.0.0/mni")
+setenv("MNI_PERL5LIB", "/project/ctb-villens/quarantine/Core/freesurfer/6.0.0/mni/lib/perl5/5.8.5")
+setenv("OS", "linux")
+setenv("PERL5LIB", "/project/ctb-villens/quarantine/Core/freesurfer/6.0.0/mni/lib/perl5/5.8.5")
+setenv("SUBJECTS_DIR", "/project/ctb-villens/quarantine/Core/freesurfer/6.0.0/subjects")
+-- Built with EasyBuild version 3.8.0

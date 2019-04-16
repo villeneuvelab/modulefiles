@@ -4,7 +4,7 @@ dcm2niix is a designed to convert neuroimaging data from the DICOM format to the
 ]])
 
 whatis("Name        : dcm2niix")
-whatis("Version     : v1.0.20181125")
+whatis("Version     : v1.0.20190410")
 whatis("Category    : Application")
 whatis("Description : dcm2nii DICOM to NIfTI converter")
 whatis("URL         : https://github.com/rordenlab/dcm2niix")

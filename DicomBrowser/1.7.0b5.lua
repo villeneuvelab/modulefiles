@@ -9,7 +9,9 @@ whatis("Category    : Application")
 whatis("Description : Inspecting and modifying DICOM metadata")
 whatis("URL         : http://nrg.wustl.edu/software/dicom-browser/")
 
+load("java")
+
 local dir = os.getenv("VL_QUARANTINE_DIR")
-local pkg = pathJoin(dir, myModuleName(), myModuleVersion())
+local pkg = pathJoin(dir, "Core", myModuleName(), myModuleVersion())
 local jar = pathJoin(pkg, "DicomBrowser-1.7.0b5-bin-with-dependencies.jar")
 set_shell_function("DicomBrowser", "java -jar " .. jar)

@@ -9,6 +9,6 @@ whatis("Version     : 180704")
 whatis("Category    : Matlab Toolbox")
 whatis("URL         : https://neuroimage.usc.edu/brainstorm")
 
-local dir = pathJoin(os.getenv("VL_QUARANTINE_DIR"), "matlab_toolboxes")
+local dir = pathJoin(os.getenv("VL_QUARANTINE_DIR"), "Core", "matlab_toolboxes")
 local pkg = pathJoin(dir, myModuleName(), myModuleVersion())
 prepend_path("MATLABPATH", pkg)

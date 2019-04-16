@@ -10,5 +10,5 @@ whatis("Description : Brain imaging renderings")
 whatis("URL         : https://www.nitrc.org/projects/mricrogl/")
 
 local dir = os.getenv("VL_QUARANTINE_DIR")
-local pkg = pathJoin(dir, string.lower(myModuleName()), myModuleVersion())
+local pkg = pathJoin(dir, "Core", string.lower(myModuleName()), myModuleVersion())
 set_shell_function("MRIcroGL", pathJoin(pkg, "MRIcroGL"))

@@ -4,7 +4,7 @@ Ncdu is a disk usage analyzer with an ncurses interface. It is designed to find 
 ]])
 
 whatis("Name        : ncdu")
-whatis("Version     : 1.13")
+whatis("Version     : 1.14")
 whatis("Category    : Application")
 whatis("Description : disk usage analyzer")
 whatis("URL         : https://dev.yorhel.nl/ncdu")

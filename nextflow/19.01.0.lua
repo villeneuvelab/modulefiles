@@ -8,11 +8,13 @@ Its fluent DSL simplifies the implementation and the deployment of complex paral
 ]])
 
 whatis("Name        : nextflow")
-whatis("Version     : v19.01.0")
+whatis("Version     : 19.01.0")
 whatis("Category    : Application")
 whatis("Description : ")
 whatis("URL         : https://www.nextflow.io/")
 
+load("java")
+
 local dir = os.getenv("VL_QUARANTINE_DIR")
-local pkg = pathJoin(dir, myModuleName(), myModuleVersion())
+local pkg = pathJoin(dir, "Core", myModuleName(), myModuleVersion())
 prepend_path("PATH", pkg)

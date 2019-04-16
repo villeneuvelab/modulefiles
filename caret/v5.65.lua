@@ -9,5 +9,5 @@ whatis("Description : ")
 whatis("URL         : http://brainvis.wustl.edu/wiki/index.php/Main_Page")
 
 local dir = os.getenv("VL_QUARANTINE_DIR")
-local pkg = pathJoin(dir, myModuleName(), myModuleVersion(), "bin_linux64")
+local pkg = pathJoin(dir, "Core", myModuleName(), myModuleVersion(), "bin_linux64")
 prepend_path("PATH", pkg)

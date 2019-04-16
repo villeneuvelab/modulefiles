@@ -10,5 +10,5 @@ whatis("Description : dcm2nii DICOM to NIfTI converter")
 whatis("URL         : https://www.nitrc.org/projects/mricron/")
 
 local dir = os.getenv("VL_QUARANTINE_DIR")
-local pkg = pathJoin(dir, myModuleName(), myModuleVersion())
+local pkg = pathJoin(dir, "Core", myModuleName(), myModuleVersion())
 prepend_path("PATH", pkg)

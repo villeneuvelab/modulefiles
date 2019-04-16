@@ -4,11 +4,10 @@ AFNI (Analysis of Functional NeuroImages) is a set of C programs for processing,
 ]])
 
 whatis("Name        : AFNI")
-whatis("Version     : v18.1.26")
 whatis("Category    : Application")
 whatis("Description : Analysis of Functional NeuroImages")
 whatis("URL         : https://afni.nimh.nih.gov/")
 
-local dir = os.getenv("VL_QUARANTINE_DIR")
-local pkg = pathJoin(dir, myModuleName(), myModuleVersion())
-prepend_path("PATH", pkg)
+load("nixpkgs/16.09")
+load("gcc/7.3.0")
+load("afni")

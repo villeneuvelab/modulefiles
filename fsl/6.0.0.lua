@@ -10,7 +10,7 @@ whatis("Description : Neuroimaging software analysis")
 whatis("URL         : https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/")
 
 local dir = os.getenv("VL_QUARANTINE_DIR")
-local pkg = pathJoin(dir, myModuleName(), myModuleVersion())
+local pkg = pathJoin(dir, "Core", myModuleName(), myModuleVersion())
 
 setenv("FSLDIR", pkg)
 setenv("FSLGECUDAQ", "cuda.q")
