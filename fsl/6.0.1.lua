@@ -4,7 +4,7 @@ FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain ima
 ]])
 
 whatis("Name        : fsl")
-whatis("Version     : 5.0.10")
+whatis("Version     : 6.0.1")
 whatis("Category    : Application")
 whatis("Description : Neuroimaging software analysis")
 whatis("URL         : https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/")
